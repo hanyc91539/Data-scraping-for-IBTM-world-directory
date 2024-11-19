@@ -12,3 +12,6 @@ We are looking for an experienced data scraper to extract company information fr
 ...
 
 [Page 2630](https://www.ibtmworld.com/en-gb/exhibitor-details.royal%20caribbean%20cruise%20line.org-ef6e8c58-d0ff-4272-88d5-f290fd3687da.html) Royal Caribbean Cruise Line
+
+### Used Python libraries
+DrissionPage, Pandas, openpyxl
