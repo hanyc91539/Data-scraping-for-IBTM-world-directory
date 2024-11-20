@@ -15,7 +15,6 @@ df = pd.read_excel('company_info.xlsx')
 
 num_rows, num_cols = df.shape
 
-
 for i in range(num_rows):
     if i % 100 == 0:
         workbook = openpyxl.Workbook()
@@ -92,14 +91,18 @@ for i in range(num_rows):
         else:
             pass
 
-    sheet[f'A{i + 2}'] = i + 1
-    sheet[f'B{i + 2}'] = companyName
-    sheet[f'C{i + 2}'] = site
-    sheet[f'D{i + 2}'] = email
-    sheet[f'E{i + 2}'] = phone
-    sheet[f'F{i + 2}'] = address
-    sheet[f'G{i + 2}'] = countries
-    sheet[f'H{i + 2}'] = exhibitors
+    # sheet[f'A{i + 2}'] = i + 1
+    # sheet[f'B{i + 2}'] = companyName
+    # sheet[f'C{i + 2}'] = site
+    # sheet[f'D{i + 2}'] = email
+    # sheet[f'E{i + 2}'] = phone
+    # sheet[f'F{i + 2}'] = address
+    # sheet[f'G{i + 2}'] = countries
+    # sheet[f'H{i + 2}'] = exhibitors
+    
+    data = [i + 1, companyName, site, email, phone, address, countries, exhibitors]
+    for col, value in zip('ABCDEFGH', data):
+        sheet[f'{col}{i + 2}'] = value
     
     print(f"-------- {i} Company --------")
     print("name:", companyName)
